@@ -50,6 +50,7 @@ hexo.extend.deployer.register('s3', function (args, callback) {
     , secret: config.aws_secret
     , bucket: config.bucket
     , concurrency: config.concurrency
+    , prefix: config.prefix
     , region: config.region
   }).on('data', function(file) {
     console.log(file.fullPath + ' -> ' + file.url)
